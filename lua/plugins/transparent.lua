@@ -1,36 +1,40 @@
+if vim.g.vscode then
+	return {}
+end
+
 return {
 	{
 		"tribela/transparent.nvim",
 		config = function()
 			require("transparent").setup({
 				extra_groups = {
-					--Which key
+                    --Which key
 					"WhichKey",
 					"WhichKeyFloat",
-					"WhichKeyBorder",
+                    "WhichKeyBorder",
 					"Normal",
 					"NormalNC",
 					"NormalFloat", -- <- Asegura transparencia en flotantes como which-key
-					-- Telescope
+                    -- Telescope
 					"TelescopeNormal",
 					"TelescopeBorder",
 					"TelescopePromptBorder",
-					-- Nvim tree
+                    -- Nvim tree
 					"NvimTreeNormal",
 					"NvimTreeNormalNC",
 					"NvimTreeEndOfBuffer",
 					"NvimTreeVertSplit",
-					-- CMP
-					"CmpItemAbbr",
-					"CmpItemAbbrMatch",
-					"CmpItemAbbrMatchFuzzy",
-					"CmpItemKind",
-					"CmpItemMenu",
-					"Pmenu",
-					"PmenuSel",
-					"PmenuSbar",
-					"PmenuThumb",
-				},
+                    -- CMP
+                    "CmpItemAbbr",
+                    "CmpItemAbbrMatch",
+                    "CmpItemAbbrMatchFuzzy",
+                    "CmpItemKind",
+                    "CmpItemMenu",
+                    "Pmenu",
+                    "PmenuSel",
+                    "PmenuSbar",
+                    "PmenuThumb",
+                },
 				exclude_groups = {},
 			})
 			vim.cmd("TransparentEnable")

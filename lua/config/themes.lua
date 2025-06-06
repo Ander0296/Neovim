@@ -2,8 +2,11 @@ local M = {}
 
 -- Tu lista de esquemas disponibles
 M.colorschemes = {
-  everforest = "everforest",
   kanagawa = "kanagawa",
+  everforest = "everforest",
+  gruvbox = "gruvbox",
+  nord = "nord",
+  catppuccin = "catppuccin",
 }
 
 -- Ruta donde se guarda el esquema elegido

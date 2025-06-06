@@ -1,0 +1,21 @@
+-- Plugin: vim-maximizer
+-- Funcionalidad: Permite maximizar una ventana dividida (split) de Neovim y luego restaurarla.
+-- Muy útil para trabajar en un archivo a pantalla completa sin cerrar otras ventanas.
+
+-- Evita que se cargue si estás usando Neovim en VSCode
+if vim.g.vscode then
+	return {}
+end
+
+return {
+	"szw/vim-maximizer",
+
+	-- Atajos personalizados para usar el plugin
+	keys = {
+		{
+			"<leader>sm", -- Al presionar <leader>sm...
+			"<cmd>MaximizerToggle<CR>", -- ...se activa o desactiva la maximización de la ventana actual
+			desc = "Maximizar/restaurar división",
+		},
+	},
+}
