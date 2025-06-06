@@ -2,6 +2,7 @@
 
 return {
 		-- Plugin del esquema de colores Kanagawa
+		{
 		"rebelot/kanagawa.nvim",
 		-- Configuración del plugin
 		config = function()
@@ -19,15 +20,18 @@ return {
 		build = function()
 			vim.cmd("KanagawaCompile")
 		end,
+	},
+	-- Everforest
+	{
+		"sainnhe/everforest",
+		priority = 998,
+		config = function()
+			vim.g.everforest_background = "soft"
+			vim.g.everforest_transparent_background = 1
+		end,
+	},
+
 }
 
-	-- Everforest
--- return	{
--- 		"sainnhe/everforest",
--- 		priority = 998,
--- 		config = function()
--- 			vim.g.everforest_background = "soft"
--- 			vim.g.everforest_transparent_background = 1
--- 		end,
--- 	}
---
+
+
