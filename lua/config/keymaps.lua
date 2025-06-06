@@ -27,8 +27,8 @@ keymap.set("n", "<C-j>", "<C-w>j", { desc = "Mover a ventana abajo" })
 keymap.set("n", "<C-k>", "<C-w>k", { desc = "Mover a ventana arriba" })
 
 -- Siempre verás el resultado en el centro de tu pantalla.
-vim.keymap.set('n', 'n', 'nzzzv', { desc = "Ir al siguiente resultado y centrar el cursor" })
-vim.keymap.set('n', 'N', 'Nzzzv', { desc = "Ir al resultado anterior y centrar el cursor" })
+vim.keymap.set("n", "n", "nzzzv", { desc = "Ir al siguiente resultado y centrar el cursor" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Ir al resultado anterior y centrar el cursor" })
 
 -- Desactivar flechas (opcional)
 vim.keymap.set({ "n", "i", "v" }, "<Up>", "<Nop>")
@@ -42,3 +42,6 @@ vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>a", { desc = "Guardar archivo" })
 
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Abrir ventana de archivos OIL" })
+
+-- Showkeys
+vim.keymap.set("n", "<leader>sk", "<cmd>ShowkeysToggle<CR>", { desc = "Mostrar teclas presionadas" })
