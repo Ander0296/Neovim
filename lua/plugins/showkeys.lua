@@ -6,6 +6,7 @@ return {
 	cmd = "ShowkeysToggle",
 	opts = {
 		timeout = 100, -- tiempo de espera para mostrar la combinación
+		maxkeys = 5,
 		position = "bottom-center", -- posición del recuadro
 		winopts = {
 			height = 1, -- altura del recuadro flotante
@@ -14,6 +15,7 @@ return {
 	config = function()
 		require("showkeys").setup({
 			timeout = 100,
+			maxkeys = 5,
 			position = "bottom-center",
 			winopts = {
 				height = 1,

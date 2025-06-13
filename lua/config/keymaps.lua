@@ -4,7 +4,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Quitar resaltado de búsque
 -- Gestión de ventanas
 keymap.set("n", "<leader>+", "<C-w>v", { desc = "Dividir ventana verticalmente" })
 keymap.set("n", "<leader>_", "<C-w>s", { desc = "Dividir ventana horizontalmente" })
-keymap.set("n", "<leader>se", "<C-w>=", { desc = "Igualar tamaño de divisiones" })
+keymap.set("n", "<leader>sM", "<C-w>=", { desc = "Igualar tamaño de divisiones" })
 keymap.set("n", "<leader>w", "<cmd>close<CR>", { desc = "Cerrar división actual" })
 
 -- Gestión de pestañas
@@ -27,21 +27,25 @@ keymap.set("n", "<C-j>", "<C-w>j", { desc = "Mover a ventana abajo" })
 keymap.set("n", "<C-k>", "<C-w>k", { desc = "Mover a ventana arriba" })
 
 -- Siempre verás el resultado en el centro de tu pantalla.
-vim.keymap.set("n", "n", "nzzzv", { desc = "Ir al siguiente resultado y centrar el cursor" })
-vim.keymap.set("n", "N", "Nzzzv", { desc = "Ir al resultado anterior y centrar el cursor" })
+keymap.set("n", "n", "nzzzv", { desc = "Ir al siguiente resultado y centrar el cursor" })
+keymap.set("n", "N", "Nzzzv", { desc = "Ir al resultado anterior y centrar el cursor" })
 
 -- Desactivar flechas (opcional)
-vim.keymap.set({ "n", "i", "v" }, "<Up>", "<Nop>")
-vim.keymap.set({ "n", "i", "v" }, "<Down>", "<Nop>")
-vim.keymap.set({ "n", "i", "v" }, "<Left>", "<Nop>")
-vim.keymap.set({ "n", "i", "v" }, "<Right>", "<Nop>")
+keymap.set({ "n", "i", "v" }, "<Up>", "<Nop>")
+keymap.set({ "n", "i", "v" }, "<Down>", "<Nop>")
+keymap.set({ "n", "i", "v" }, "<Left>", "<Nop>")
+keymap.set({ "n", "i", "v" }, "<Right>", "<Nop>")
 
 -- Guardar con Ctrl+S
-vim.keymap.set("n", "<C-s>", ":w<CR>", { desc = "Guardar archivo" })
-vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>a", { desc = "Guardar archivo" })
+keymap.set("n", "<C-s>", ":w<CR>", { desc = "Guardar archivo" })
+keymap.set("i", "<C-s>", "<Esc>:w<CR>a", { desc = "Guardar archivo" })
 
 -- Oil
-vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Abrir ventana de archivos OIL" })
+keymap.set("n", "<leader>oil", "<CMD>Oil --float<CR>", { desc = "Abrir ventana de archivos OIL" })
 
 -- Showkeys
-vim.keymap.set("n", "<leader>sk", "<cmd>ShowkeysToggle<CR>", { desc = "Mostrar teclas presionadas" })
+keymap.set("n", "<leader>sk", "<cmd>ShowkeysToggle<CR>", { desc = "Mostrar teclas presionadas" })
+
+-- Snacks
+-- Volver al dashboard de snacks
+keymap.set("n", "<leader>si", "<cmd>SnacksDashboard<CR>", { desc = "Volver al dashboard" })

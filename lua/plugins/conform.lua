@@ -4,10 +4,6 @@
 -- También puede usarse como reemplazo o complemento al formateo de LSP.
 
 -- Evita cargar el plugin si estás dentro de VSCode
-if vim.g.vscode then
-	return {}
-end
-
 return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" }, -- Se carga al abrir o crear un archivo

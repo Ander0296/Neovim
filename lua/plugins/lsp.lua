@@ -1,11 +1,7 @@
-if vim.g.vscode then
-	return {}
-end
-
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
-        "williamboman/mason-lspconfig",
+		"williamboman/mason-lspconfig",
 		"folke/lazydev.nvim",
 	},
 	config = function()
@@ -41,11 +37,11 @@ return {
 			-- end, opts)
 		end
 
-        require("mason").setup()
-        require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "jdtls" }, -- puedes añadir más aquí
-            automatic_installation = true,
-        })
+		require("mason").setup()
+		require("mason-lspconfig").setup({
+			ensure_installed = { "lua_ls", "jdtls" }, -- puedes añadir más aquí
+			automatic_installation = true,
+		})
 		require("lazydev").setup({})
 		require("lspconfig").lua_ls.setup({
 			on_attach = on_attach,

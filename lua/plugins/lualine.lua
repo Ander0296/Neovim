@@ -2,9 +2,14 @@
 -- Funcionalidad: Barra de estado moderna y personalizable para Neovim.
 -- Muestra información útil como nombre del archivo, modo de edición, rama de Git, errores del LSP, etc.
 
--- No se carga si estás en VSCode
-if vim.g.vscode then
-	return {}
+-- Función que muestra "REC @x" si estás grabando una macro
+local function recording_status()
+	local reg = vim.fn.reg_recording()
+	if reg == "" then
+		return ""
+	else
+		return "REC @" .. reg
+	end
 end
 
 return {
@@ -27,6 +32,7 @@ return {
 					file_status = true, -- Muestra indicador [+] si fue modificado
 					path = 1, -- Muestra la ruta relativa del archivo
 				},
+				recording_status, -- Muestra si estás grabando una macro
 			},
 		},
 

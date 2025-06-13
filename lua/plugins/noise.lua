@@ -2,11 +2,6 @@
 -- Funcionalidad: Mejora la interfaz de usuario de Neovim para mostrar comandos, mensajes, búsqueda y notificaciones.
 -- Reemplaza las ventanas flotantes básicas de LSP y las líneas de comandos por interfaces modernas y más legibles.
 
--- Evita cargar el plugin si estás dentro de VSCode
-if vim.g.vscode then
-	return {}
-end
-
 return {
 	"folke/noice.nvim",
 	event = "VeryLazy", -- Se carga de forma diferida (cuando es necesario)
