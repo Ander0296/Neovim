@@ -1,0 +1,19 @@
+# Archivos compilados de spell checker (generados automáticamente desde *.add)
+spell/*.spl
+spell/*.add.spl
+
+# Config local por proyecto (generada por exrc = true en options.lua)
+.nvim.lua
+.nvimrc
+.nvimrc.lua
+
+# Archivos de sesión (si auto-session guarda algo aquí)
+*.session.vim
+Session.vim
+
+# Copilot/agent artifacts
+.atl/
+
+# OS
+.DS_Store
+Thumbs.db
